@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Niels Schmidt - CV</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/Controller.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Niels Schmidt</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a id="lang_menu_AboutMe" href="#" onclick="pageIntroduction();"></a></li>
+                    <li><a id="lang_menu_Skills" href="#"></a></li>
+                    <li><a id="lang_menu_Portfolio" href="#"></a></li>
+                    <li><a id="lang_menu_Education" href="#"></a></li>
+                    <li><a id="lang_menu_WorkHistory" href="#"></a></li>
+                    <li><a id="lang_menu_ContactMe" href="#"></a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
+                    <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="content"></div>
+
+<div class="footer navbar-fixed-bottom navbar-inverse">
+        <div align="center" class="text-info">Created by Niels Schmidt - &copy; Copyright 2016.</div>
+</div>
+</body>
+</html>

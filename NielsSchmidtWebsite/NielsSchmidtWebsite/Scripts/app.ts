@@ -53,15 +53,21 @@ window.onload = () => {
     //var el = document.getElementById("content");
     //var greeter = new Greeter(el);
     //greeter.start();
-    // Set initial language
+
+    // Set initial language if none set already in browser.
     if (localStorage.getItem('SiteLanguage') === null) {
         localStorage.setItem('SiteLanguage', "EN");
     }
+
+    // Set the site language
     var lang = new SiteLanguage();
     lang.SetLanguage();
+
+    // Start us off on the introduction page
     pageIntroduction();
 };
 
+// Changes the language on the site.
 function changeLanguage(langCode) {
     localStorage.setItem('SiteLanguage', langCode);
     var lang = new SiteLanguage();
@@ -69,7 +75,8 @@ function changeLanguage(langCode) {
     changeLanguageOnPage();
 }
 
-function translatePage() {
-    var lang = new SiteLanguage();
-    lang.SetLanguage();
-}
+
+//function translatePage() {
+//    var lang = new SiteLanguage();
+//    lang.SetLanguage();
+//}

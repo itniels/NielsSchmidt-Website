@@ -18,49 +18,49 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Niels Schmidt</a>
+    <div class="container">
+        <nav class="navbar-static-top navbar-default ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Niels Schmidt</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a id="lang_menu_AboutMe" href="#" onclick="pageIntroduction();"></a></li>
+                        <li><a id="lang_menu_Skills" href="#" onclick="pageSkills();"></a></li>
+                        <li><a id="lang_menu_Portfolio" href="#" onclick="pagePortfolio();"></a></li>
+                        <li><a id="lang_menu_Education" href="#" onclick="pageEducation();"></a></li>
+                        <li><a id="lang_menu_WorkHistory" href="#" onclick="pageWork();"></a></li>
+                        <li><a id="lang_menu_ContactMe" href="#" onclick="pageContact();"></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
+                        <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a id="lang_menu_AboutMe" href="#" onclick="pageIntroduction();"></a></li>
-                    <li><a id="lang_menu_Skills" href="#"></a></li>
-                    <li><a id="lang_menu_Portfolio" href="#"></a></li>
-                    <li><a id="lang_menu_Education" href="#"></a></li>
-                    <li><a id="lang_menu_WorkHistory" href="#"></a></li>
-                    <li><a id="lang_menu_ContactMe" href="#"></a></li>
+        </nav>
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
-                    <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
-                </ul>
+        <div id="header" class="row">
+            <div class="col-md-5">
+                <img src="/Images/Niels_Small.png" class="form-control-static" height="250"/>
+                <br/>
+                <br/>
+                <a href="https://github.com/itniels" target="_blank">Github</a> |
+                <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a>
             </div>
+            <div id="content" class="col-md-7"></div>
         </div>
-    </nav>
 
-    <div id="header" class="page-header">
-        <div class="row">
-            <div class="col-lg-5">
-                <img src="/Images/Niels_Small.png" height="250" />
-            </div>
+        <div class="footer navbar-fixed-bottom navbar-inverse">
+            <div align="center" class="text-info">Created by Niels Schmidt - &copy; Copyright 2016.</div>
         </div>
-        
-    </div>
-
-    <div id="content"></div>
-
-    <div class="footer navbar-fixed-bottom navbar-inverse">
-        <div align="center" class="text-info">Created by Niels Schmidt - &copy; Copyright 2016.</div>
     </div>
 </body>
 </html>

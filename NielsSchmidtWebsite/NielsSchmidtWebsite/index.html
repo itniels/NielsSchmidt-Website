@@ -19,7 +19,7 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-default" data-spy="affix" data-offset-top="0">
+        <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Niels Schmidt</a>
+                    <a class="navbar-brand" href="https://nielsschmidt.dk">Niels Schmidt</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -40,8 +40,14 @@
                         <li><a id="lang_menu_ContactMe" href="#" onclick="pageContact();"></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
-                        <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
+                                <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
+                            </ul>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -50,11 +56,11 @@
         <div id="header" class="row">
             <div id="content" class="col-md-8"></div>
             <div align="right" class="col-md-3">
-                <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="300" />
+                <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="300"/>
                 <h3 id="lang_sidebar_FindMeOn"></h3>
-                <a href="https://github.com/itniels" target="_blank">Github</a> <br />
-                <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br />
-                <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br />
+                <a href="https://github.com/itniels" target="_blank">Github</a> <br/>
+                <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br/>
+                <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br/>
                 <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
             </div>
         </div>

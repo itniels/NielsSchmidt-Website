@@ -31,6 +31,7 @@
     <Content Include="Images\flag_round_denmark.png" />
     <Content Include="Images\flag_round_usa.png" />
     <Content Include="Images\Niels_Small.png" />
+    <Content Include="Images\Niels_Small_Round.png" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

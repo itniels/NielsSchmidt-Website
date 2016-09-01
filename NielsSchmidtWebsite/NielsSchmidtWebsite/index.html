@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="https://nielsschmidt.dk">Niels Schmidt</a>
+                    <div class="hidden-sm"><a class="navbar-brand" href="https://nielsschmidt.dk">Niels Schmidt</a></div>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -40,15 +40,17 @@
                         <li><a id="lang_menu_ContactMe" href="#" onclick="pageContact();"></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                        <li class="dropdown hidden-md hidden-lg">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
-                                <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
+                                <li><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25"/> English</a></li>
+                                <li><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25"/> Dansk</a></li>
                             </ul>
                         </li>
-                        
+                        <li class="hidden-sm"><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
+                        <li class="hidden-sm"><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
                     </ul>
+                        
                 </div>
             </div>
         </nav>

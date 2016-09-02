@@ -17,3 +17,7 @@ span {
 .name-text {
     font-size: 25px;
 }
+
+.navbar-fixed-niels{
+    position: fixed;
+}

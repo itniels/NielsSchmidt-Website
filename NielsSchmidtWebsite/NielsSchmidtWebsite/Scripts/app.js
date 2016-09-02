@@ -1,7 +1,5 @@
-var SiteLanguage = (function () {
-    function SiteLanguage() {
-    }
-    SiteLanguage.prototype.SetLanguage = function () {
+class SiteLanguage {
+    SetLanguage() {
         if (localStorage.getItem("SiteLanguage") === "DA") {
             // Menu
             document.getElementById("lang_menu_AboutMe").innerHTML = "Introduktion";
@@ -10,7 +8,7 @@ var SiteLanguage = (function () {
             document.getElementById("lang_menu_Education").innerHTML = "Uddannelse";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Arbejde";
             document.getElementById("lang_menu_ContactMe").innerHTML = "Kontakt Mig";
-            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Language";
+            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Language ";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find mig på";
         }
@@ -22,16 +20,15 @@ var SiteLanguage = (function () {
             document.getElementById("lang_menu_Education").innerHTML = "Education";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Work";
             document.getElementById("lang_menu_ContactMe").innerHTML = "Contact Me";
-            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Sprog";
+            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Sprog ";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find me on";
         }
         else {
         }
-    };
-    return SiteLanguage;
-})();
-window.onload = function () {
+    }
+}
+window.onload = () => {
     // Set initial language if none set already in browser.
     if (localStorage.getItem('SiteLanguage') === null) {
         localStorage.setItem('SiteLanguage', "EN");

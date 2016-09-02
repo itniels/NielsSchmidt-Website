@@ -1,3 +1,7 @@
+function setPage(url) {
+    $("#content").load(url);
+    $("#content-xs").load(url);
+}
 function changeLanguageOnPage() {
     if (localStorage.getItem('SitePage') === "introduction")
         pageIntroduction();
@@ -12,77 +16,77 @@ function changeLanguageOnPage() {
     else if (localStorage.getItem('SitePage') === "contact")
         pageContact();
     else
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
 }
 function pageIntroduction() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_introduction_EN.html");
+        setPage("/Views/_introduction_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_introduction_DA.html");
+        setPage("/Views/_introduction_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "introduction");
 }
 function pageSkills() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_skills_EN.html");
+        setPage("/Views/_skills_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_skills_DA.html");
+        setPage("/Views/_skills_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "skills");
 }
 function pagePortfolio() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_portfolio_EN.html");
+        setPage("/Views/_portfolio_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_portfolio_DA.html");
+        setPage("/Views/_portfolio_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "portfolio");
 }
 function pageEducation() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_education_EN.html");
+        setPage("/Views/_education_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_education_DA.html");
+        setPage("/Views/_education_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "education");
 }
 function pageWork() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_work_EN.html");
+        setPage("/Views/_work_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_work_DA.html");
+        setPage("/Views/_work_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "work");
 }
 function pageContact() {
     if (localStorage.getItem('SiteLanguage') === "EN") {
-        $("#content").load("/Views/_contact_EN.html");
+        setPage("/Views/_contact_EN.html");
     }
     else if (localStorage.getItem('SiteLanguage') === "DA") {
-        $("#content").load("/Views/_contact_DA.html");
+        setPage("/Views/_contact_DA.html");
     }
     else {
-        $("#content").load("/Views/_ERROR.html");
+        setPage("/Views/_ERROR.html");
     }
     localStorage.setItem('SitePage', "contact");
 }

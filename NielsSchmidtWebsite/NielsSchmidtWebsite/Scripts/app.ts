@@ -9,7 +9,7 @@
             document.getElementById("lang_menu_Education").innerHTML = "Uddannelse";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Arbejde";
             document.getElementById("lang_menu_ContactMe").innerHTML = "Kontakt Mig";
-            //document.getElementById("lang_menu_LanguageSelector").innerHTML = "Language";
+            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Language";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find mig på";
         }
@@ -21,7 +21,7 @@
             document.getElementById("lang_menu_Education").innerHTML = "Education";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Work";
             document.getElementById("lang_menu_ContactMe").innerHTML = "Contact Me";
-            //document.getElementById("lang_menu_LanguageSelector").innerHTML = "Sprog";
+            document.getElementById("lang_menu_LanguageSelector").innerHTML = "Sprog";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find me on";
         } else {

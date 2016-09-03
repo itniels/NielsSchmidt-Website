@@ -4,9 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+
     <title>Niels Schmidt - CV</title>
+
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <link rel="stylesheet" href="Content/bootstrap.min.css">
+
     <script src="Scripts/jquery-3.1.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/app.js"></script>
@@ -14,9 +21,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-fixed-niels navbar-default" role="navigation">
-            <div class="container-fluid">
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -24,7 +31,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div class="hidden-sm"><a class="navbar-brand" href="/">Niels Schmidt</a></div>
+                    <div class="hidden-sm"><a class="navbar-brand" href="/">Niels Schmidt</a>
+                    </div>
+                    <div class="hidden-xs hidden-md hidden-lg"><a class="navbar-brand" href="/">NS</a></div>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -36,8 +45,9 @@
                         <li><a id="lang_menu_ContactMe" href="#" onclick="pageContact();"></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden-xs hidden-md hidden-lg"><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /></a></li>
-                        <li class="hidden-xs hidden-md hidden-lg"><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /></a></li>
+                        <li class="hidden-xs hidden-md hidden-lg"><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25"/></a></li>
+                        <li class="hidden-xs hidden-md hidden-lg"><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25"/></a></li>
+
                         <li class="hidden-sm"><a onclick="changeLanguage('EN');" href="#"><img src="Images/flag_round_usa.png" height="25" /> English</a></li>
                         <li class="hidden-sm"><a onclick="changeLanguage('DA');" href="#"><img src="Images/flag_round_denmark.png" height="25" /> Dansk</a></li>
                     </ul>
@@ -45,38 +55,41 @@
                 </div>
             </div>
         </nav>
-
-        <div class="hidden-xs">
-            <div class="row">
-                <div align="left" class="col-xs-8 col-sm-8 col-md-8">
-                    <div id="content"></div>
+    </div>
+        <div class="container">
+            <div class="hidden-xs">
+                <div class="row">
+                    <div align="left" class="col-xs-8 col-sm-8 col-md-8">
+                        <div id="content"></div>
+                    </div>
+                    <div align="center" class="sidebar col-xs-4 col-sm-4 col-md-4">
+                        <h2>Niels Schmidt</h2>
+                        <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="200" />
+                        <h3 id="lang_sidebar_FindMeOn"></h3>
+                        <a href="https://github.com/itniels" target="_blank">Github</a> <br />
+                        <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br />
+                        <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br />
+                        <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
+                    </div>
                 </div>
-                <div align="center" class="sidebar col-xs-4 col-sm-4 col-md-4">
-                    <h2>Niels Schmidt</h2>
-                    <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="200" />
+            </div>
+            <div class="hidden-sm hidden-md hidden-lg">
+                <div align="center" class="sidebar">
+                    <div class="name-text">Niels Schmidt <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="140"/>
+                    </div>
                     <h3 id="lang_sidebar_FindMeOn"></h3>
-                    <a href="https://github.com/itniels" target="_blank">Github</a> <br />
-                    <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br />
-                    <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br />
+                    <a href="https://github.com/itniels" target="_blank">Github</a> |
+                    <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> |
+                    <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> |
                     <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
                 </div>
+                <br/>
+                <div id="content-xs"></div>
+            </div>
+            <div class="footer navbar-fixed-bottom navbar-inverse">
+                <div id="lang_footer_long" align="center" class="text-footer hidden-xs"></div>
+                <div id="lang_footer_short" align="center" class="text-footer hidden-sm hidden-md hidden-lg"></div>
             </div>
         </div>
-        <div class="hidden-sm hidden-md hidden-lg">
-            <div align="center" class="sidebar">
-                <div class="name-text">Niels Schmidt <img src="/Images/Niels_Small_Round.png" class="form-control-static" height="140" /></div>
-                <h3 id="lang_sidebar_FindMeOn"></h3>
-                <a href="https://github.com/itniels" target="_blank">Github</a> |
-                <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> |
-                <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> |
-                <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
-            </div>
-            <div id="content-xs"></div>
-        </div>
-        <div class="footer navbar-fixed-bottom navbar-inverse">
-            <div align="center" class="text-info hidden-xs">Created, written and programmed by Niels Schmidt - &copy; Copyright 2016.</div>
-            <div align="center" class="text-info hidden-sm hidden-md hidden-lg">Created by Niels Schmidt - &copy; Copyright 2016.</div>
-        </div>
-    </div>
 </body>
 </html>

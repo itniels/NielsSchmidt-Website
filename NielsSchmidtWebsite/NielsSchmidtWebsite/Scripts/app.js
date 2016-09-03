@@ -3,12 +3,14 @@ class SiteLanguage {
         if (localStorage.getItem("SiteLanguage") === "DA") {
             // Menu
             document.getElementById("lang_menu_AboutMe").innerHTML = "Introduktion";
-            document.getElementById("lang_menu_Skills").innerHTML = "Evner";
+            document.getElementById("lang_menu_Skills").innerHTML = "Færdigheder";
             document.getElementById("lang_menu_Portfolio").innerHTML = "Portefølje";
             document.getElementById("lang_menu_Education").innerHTML = "Uddannelse";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Arbejde";
-            document.getElementById("lang_menu_ContactMe").innerHTML = "Kontakt Mig";
-            //document.getElementById("lang_menu_LanguageSelector").innerHTML = "Language ";
+            document.getElementById("lang_menu_ContactMe").innerHTML = "Kontakt";
+            // footer
+            document.getElementById("lang_footer_long").innerHTML = "Designet, skrevet og programeret af Niels Schmidt - &copy; Copyright 2016.";
+            document.getElementById("lang_footer_short").innerHTML = "Lavet af Niels Schmidt - &copy; Copyright 2016.";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find mig på";
         }
@@ -20,7 +22,9 @@ class SiteLanguage {
             document.getElementById("lang_menu_Education").innerHTML = "Education";
             document.getElementById("lang_menu_WorkHistory").innerHTML = "Work";
             document.getElementById("lang_menu_ContactMe").innerHTML = "Contact Me";
-            //document.getElementById("lang_menu_LanguageSelector").innerHTML = "Sprog ";
+            // footer
+            document.getElementById("lang_footer_long").innerHTML = "Created, written and programmed by Niels Schmidt - &copy; Copyright 2016.";
+            document.getElementById("lang_footer_short").innerHTML = "Created by Niels Schmidt - &copy; Copyright 2016.";
             // Text
             document.getElementById("lang_sidebar_FindMeOn").innerHTML = "Find me on";
         }

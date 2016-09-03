@@ -1,10 +1,18 @@
 ﻿body {
     font-family: 'Segoe UI', sans-serif;
-    position: relative;
+    /*position: relative;*/
+    padding-bottom: 50px;
 }
 
 span {
     font-style: italic;
+}
+
+.page-top-header {
+    background: #008cba !important;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .sidebar {
@@ -18,6 +26,11 @@ span {
     font-size: 25px;
 }
 
-.navbar-fixed-niels{
+.text-footer {
+    color: whitesmoke;
+}
+
+.navbar {
+    display: block;
     position: fixed;
 }

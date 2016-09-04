@@ -22,3 +22,25 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.page-top-header {
+    background: #007da6 !important;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar {
+    /*background-color: #ebeaea;*/
+    border-radius: 25px;
+    background: #ebeaea;
+    padding: 20px;
+}
+
+.name-text {
+    font-size: 25px;
+}
+
+.text-footer {
+    color: whitesmoke;
+}

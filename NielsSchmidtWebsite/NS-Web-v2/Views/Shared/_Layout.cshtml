@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,37 +7,138 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/unobjq")
 </head>
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="hidden-sm">
+                @Html.ActionLink("Niels Schmidt", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="hidden-xs hidden-md hidden-lg">
+                @Html.ActionLink("NS", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
             </div>
         </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @if (Session["language"].ToString() == "DA")
+                {
+                    <li>@Html.ActionLink("Introduktion", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Færdigheder", "Skills", "Home")</li>
+                    <li>@Html.ActionLink("Portefølje", "Portfolio", "Home")</li>
+                    <li>@Html.ActionLink("Uddannelse", "Education", "Home")</li>
+                    <li>@Html.ActionLink("Arbejde", "Work", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Introduction", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Skills", "Skills", "Home")</li>
+                    <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+                    <li>@Html.ActionLink("Education", "Education", "Home")</li>
+                    <li>@Html.ActionLink("Work", "Work", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden-xs hidden-md hidden-lg"><a href="#" onclick="ChangeLanguage('EN');"><img src="/Content/Images/flag_round_usa.png" height="25"/></a></li>
+                <li class="hidden-xs hidden-md hidden-lg"><a href="#" onclick="ChangeLanguage('DA');"><img src="/Content/Images/flag_round_denmark.png" height="25"/></a></li>
+
+                <li class="hidden-sm"><a href="#" onclick="ChangeLanguage('EN');"><img src="/Content/Images/flag_round_usa.png" height="25"/> English</a></li>
+                <li class="hidden-sm"><a href="#" onclick="ChangeLanguage('DA');"><img src="/Content/Images/flag_round_denmark.png" height="25"/> Dansk</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>Created, written and programmed by Niels Schmidt - &copy; @DateTime.Now.Year</p>
-        </footer>
+</div>
+<div class="container">
+
+    <div class="hidden-sm hidden-md hidden-lg">
+        <div align="center" class="sidebar">
+            <div class="name-text">
+                Niels Schmidt <img src="/Content/Images/Niels_Small_Round.png" class="form-control-static" height="140"/>
+            </div>
+            @if (Session["language"].ToString() == "DA")
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find mig på</h3>
+            }
+            else
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find me on</h3>
+            }
+            
+            <a href="https://github.com/itniels" target="_blank">Github</a> |
+            <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> |
+            <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> |
+            <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
+        </div>
+        <br/>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <div class="row">
+        <div align="left" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="body-content">
+                @RenderBody()
+            </div>
+        </div>
+        <div align="center" class="hidden-xs sidebar col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h2>Niels Schmidt</h2>
+            <img src="/Content/Images/Niels_Small_Round.png" class="form-control-static" height="200"/>
+            @if (Session["language"].ToString() == "DA")
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find mig på</h3>
+            }
+            else
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find me on</h3>
+            }
+            <a href="https://github.com/itniels" target="_blank">Github</a> <br/>
+            <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br/>
+            <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br/>
+            <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
+        </div>
+    </div>
+</div>
+
+@if (Session["language"].ToString() == "DA")
+{
+    <div class="footer navbar-fixed-bottom navbar-inverse">
+        <div id="lang_footer_long" align="center" class="text-footer hidden-xs">Designet, skrevet og programeret af Niels Schmidt - &copy; Copyright 2016.</div>
+        <div id="lang_footer_short" align="center" class="text-footer hidden-sm hidden-md hidden-lg">Lavet af Niels Schmidt - &copy; Copyright 2016.</div>
+    </div>
+}
+else
+{
+    <div class="footer navbar-fixed-bottom navbar-inverse">
+        <div id="lang_footer_long" align="center" class="text-footer hidden-xs">Created, written and programmed by Niels Schmidt - &copy; Copyright 2016.</div>
+        <div id="lang_footer_short" align="center" class="text-footer hidden-sm hidden-md hidden-lg">Created by Niels Schmidt - &copy; Copyright 2016.</div>
+    </div>
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+
 </body>
 </html>
+
+<script>
+    // Changes the site language and refreshes the current page.
+    function ChangeLanguage(lang) {
+        $.ajax({
+            type: "POST",
+            url: "ChangeLanguage",
+            data: { language: lang }
+        }).done(function () {
+            location.reload();
+        });
+    }
+</script>

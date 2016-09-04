@@ -1,33 +1,37 @@
-﻿<div class="well page-top-header">Skills</div>
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="well page-top-header">Færdigheder</div>
 
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title">Certificates</h3>
+        <h3 class="panel-title">Certifikater</h3>
     </div>
     <div class="panel-body">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Type</th>
-                    <th>Level</th>
-                    <th>Description</th>
+                    <th>Niveau</th>
+                    <th>Beskrivelse</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Drivers License</td>
-                    <td>B (Denmark)</td>
-                    <td>For Regular cars.</td>
+                    <td>Kørekort</td>
+                    <td>B (Danmark)</td>
+                    <td>For almindelig bil.</td>
                 </tr>
                 <tr>
-                    <td>Forklift</td>
-                    <td>N/A (Denmark)</td>
-                    <td>Any size forklifts.</td>
+                    <td>Gaffel Truck</td>
+                    <td>N/A (Danmark)</td>
+                    <td>Alle størrelser gaffeltruck.</td>
                 </tr>
                 <tr>
-                    <td>Crane</td>
-                    <td>C (Denmark)</td>
-                    <td>Traverse cranes.</td>
+                    <td>Kran</td>
+                    <td>C (Danmark)</td>
+                    <td>Travers kran.</td>
                 </tr>
             </tbody>
         </table>
@@ -36,23 +40,23 @@
 
 <div class="panel panel-danger">
     <div class="panel-heading">
-        <h3 class="panel-title">Programming SKills</h3>
+        <h3 class="panel-title">Programerings Sprog</h3>
     </div>
     <div class="panel-body">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Type</th>
-                    <th>Years</th>
-                    <th>Description</th>
-                    <th>Experience</th>
+                    <th>År</th>
+                    <th>Beskrivelse</th>
+                    <th>Erfaring</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>C#</td>
                     <td>5</td>
-                    <td>Is my favorite language, I have a special love for C# as I taught myself this. It is the primary language I love to work in.</td>
+                    <td>Er mit favorit sprog, jeg har en helt speciel kærlighed for C# da jeg lærte migselv sproget. Det er det primære sprog jeg elsker at arbejde i.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
@@ -64,7 +68,7 @@
                 <tr>
                     <td>HTML5 + CSS3</td>
                     <td>5-8</td>
-                    <td>I have used HTML and CSS for a lot of little site in my time.</td>
+                    <td>jeg har brugt HTML5 og CSS til at lave en masse små sites i min tid.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
@@ -74,9 +78,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Java Script and JQuery</td>
+                    <td>Java Script og JQuery</td>
                     <td>2</td>
-                    <td>Since I have been working more with C# MVC I have learned quite a bit more of JS and JQuery.</td>
+                    <td>Siden jeg er begyndt at arbejde mere med C# MVC så er jeg begyndt at lære en hel del JS og JQury.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
@@ -88,7 +92,7 @@
                 <tr>
                     <td>Unix BASH Scripting</td>
                     <td>7</td>
-                    <td>I use bash scripting a lot on my servers to automate things.</td>
+                    <td>Jeg bruger bash scripting en del på miine servere til at automatisere ting.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -100,7 +104,7 @@
                 <tr>
                     <td>Java</td>
                     <td>2</td>
-                    <td>I have learned Java during school where this was the main language.</td>
+                    <td>Jeg har lært Java I min studie tid, da det var hovedsproget vi arbejde med.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
@@ -112,7 +116,7 @@
                 <tr>
                     <td>Unity3D</td>
                     <td>0.5</td>
-                    <td>I have played a little with gaming creating using C# and Unity3D.</td>
+                    <td>Jeg har leget en smule med at lave spil med C# i Unity3D</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -124,7 +128,7 @@
                 <tr>
                     <td>Java Server faces (JSF)</td>
                     <td>0.5</td>
-                    <td>We had a course on JSF in school, where we made a CRM solution using XHTML and JSF.</td>
+                    <td>Vi have et kursus med JSF i skolen, hvor vi skulle lave en CRM løsning med XHTMl og JSF.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
@@ -136,7 +140,7 @@
                 <tr>
                     <td>Python</td>
                     <td>0.2</td>
-                    <td>I purchsed a Raspberry Pi and wrote a few small programs for it's sensors in python.</td>
+                    <td>Jeg købte en Raspberry Pi og har skrevet et par programmer i python til at styre sonsorene.</td>
                     <td>
                         <div class="progress" style="width: 75px;">
                             <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
@@ -153,46 +157,46 @@
 
 <div class="panel panel-warning">
     <div class="panel-heading">
-        <h3 class="panel-title">Work SKills</h3>
+        <h3 class="panel-title">Arbejds færdigheder</h3>
     </div>
     <div class="panel-body">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Type</th>
-                    <th>Years</th>
-                    <th>Description</th>
+                    <th>År</th>
+                    <th>Beskrivelse</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Proxmox Servers</td>
+                    <td>Proxmox Servere</td>
                     <td>4-5</td>
                     <td>
-                        I have had my own servers for years, using proxmox as the basis, and then windows/linux virtual machines on top.<br />
-                        I run several servers for a webhosting company with a proxmox setup, using CentOS7 + Cpanel virtual machines.
+                        Jeg har haft mine egne servere i mange år, og bruger altid proxmox som basis med enten windows eller linux ovenpå.
+                        Jeg administrere flere servere for et webhosting firma med et proxmox setup med CentOS7 + CPanel virtuelle maskiner.
                     </td>
                 </tr>
                 <tr>
-                    <td>School IT-Department</td>
+                    <td>Skole IT-Afdeling</td>
                     <td>1.5</td>
                     <td>
-                        Worked in a team with 2 others, managing a private schools IT/Servers/Network.
-                        I wrote some applications to manage the Active Directory and monitor the schools IT infrastructure.
+                        Arbejde i et lille team med 2 andre, hvor vi administrerede skolens IT/Servere/netværk.
+                        jeg skrev også nogle applikationer til at administrere Active Directory og til at overvåge skolens IT infrastruktur.
                     </td>
                 </tr>
                 <tr>
-                    <td>Warehouse</td>
+                    <td>Lager</td>
                     <td>8</td>
                     <td>
-                        Working as a packer / forklift driver in several different warehouses.<br />
-                        Working with everything from plumbing supplies to highly toxic chemicals.
+                        Arbejdede som en pakker / gaffeltruck operatør på flere forskellige lagre.
+                        Arbjede med alt fra VVS tilbehør til ekstremt giftig kemikalier.
                     </td>
                 </tr>
                 <tr>
-                    <td>Quality Production</td>
+                    <td>Kvalitets Produktion</td>
                     <td>3</td>
-                    <td>Working in a production factory making high end solid wood table tops for kitchens.</td>
+                    <td>Arbejde i en produktions virksomhed, hvor vi lavede høj-kvalitets træbordplader til køkkener.</td>
                 </tr>
             </tbody>
         </table>
@@ -201,20 +205,20 @@
 
 <div class="panel panel-success">
     <div class="panel-heading">
-        <h3 class="panel-title">Personal Skills</h3>
+        <h3 class="panel-title">Personlige færdigheder</h3>
     </div>
     <div class="panel-body">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Type</th>
-                    <th>Level</th>
-                    <th>Description</th>
+                    <th>Niveau</th>
+                    <th>Beskrivelse</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Critical thinking</td>
+                    <td>Kritisk Tænkning</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -222,10 +226,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>I feel like I am good at stopping and analyzing something before just beliving things blindly.</td>
+                    <td>Jeg føler jeg er god til at stoppe op og analysere inden jeg bare tror på noget blindt.</td>
                 </tr>
                 <tr>
-                    <td>Logical Thinking</td>
+                    <td>Logisk Tænkning</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
@@ -233,12 +237,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>
-                        I am a logical person. I am good at stopping and thinking even in emotional situation.
-                    </td>
+                    <td>Jeg er en logisk person. Jeg er god til at stoppe op og tænke, selv i emotionelle situationer</td>
                 </tr>
                 <tr>
-                    <td>Dependable</td>
+                    <td>Pålidelig</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -246,10 +248,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>I am a very dependable person, if I need to get something done, It will get done. I do not promise something and not follow through.</td>
+                    <td>Jeg er en meget pålidelig person, hvis der er noget jeg skal have gjort, så skal det nok blive det. Og hvis jeg lover noget, så skal jeg nok følge det til dørs.</td>
                 </tr>
                 <tr>
-                    <td>Flexible</td>
+                    <td>Fleksibel</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
@@ -257,14 +259,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>
-                        I am very flexible, and belive in the right tool for the job. I am not set in my ways,
-                        and change is welcome. But I do have favorite languages that I perfer to work with.
-                        And being a family man flexiblity is not always something that is easy.
-                    </td>
+                    <td>Jeg er meget fleksibel, og tror på det rigtige værktøj til jobbet. Jeg er ikke sat i mine veje, og ændring er velkommen.</td>
                 </tr>
                 <tr>
-                    <td>Interpersonal (people skills)</td>
+                    <td>Menneske færdigheder</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
@@ -272,7 +270,7 @@
                             </div>
                         </div>
                     </td>
-                    <td>I am very good at understanding, relating to, and talking/working with other people of all types.</td>
+                    <td>Jeg er rigtig go til at forstå, relatere til, og snakke/arbejde med andre mennesker af alle typer.</td>
                 </tr>
                 <tr>
                     <td>Motivation</td>
@@ -284,12 +282,12 @@
                         </div>
                     </td>
                     <td>
-                        I am very motivated, when I set my mind to do something, or have a job to do,
-                        I can work for very long periods of time to do a good job and get it done right.
+                        Jeg er meget motiveret, når jeg sætter mig for at gøre noget, eller har et job der skal laves,
+                        så kan jeg arbejde i meget lange perioder af gangen for at gøre et godt job og få det gjort rigtigt.
                     </td>
                 </tr>
                 <tr>
-                    <td>Ethical</td>
+                    <td>Etisk</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -297,10 +295,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>Being ethical is important to me, doing the right thing, for the right reasons, even when no one is looking!</td>
+                    <td>Etik er vigtigt for mig, at gøre det rigtige, for de rigtige grunde, selv når ingen kigger!</td>
                 </tr>
                 <tr>
-                    <td>Independent</td>
+                    <td>Selvstændig</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
@@ -309,12 +307,12 @@
                         </div>
                     </td>
                     <td>
-                        Just as I work well in a team, I work very well independently.
-                        I have a good work moral, and can solve problems and find solution on my own.
+                        Ligesom jeg arbejder godt i teams, så arbejder jeg også rigtig godt selvstændigt.
+                        Jeg har en go arbejdsmoral, og kan løre problemer og finde løsninger på egen hånd.
                     </td>
                 </tr>
                 <tr>
-                    <td>Patience</td>
+                    <td>Tålmodighed</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
@@ -322,10 +320,10 @@
                             </div>
                         </div>
                     </td>
-                    <td>I have a good amount of patience, both with things I work on, but also with people I work with.</td>
+                    <td>Jeg har en rigtig god portion tålmodighed, både med ting jeg arbejder på, men også med folk jeg arbejder med.</td>
                 </tr>
                 <tr>
-                    <td>Responsible</td>
+                    <td>Ansvarlighed</td>
                     <td>
                         <div class="progress" style="width: 100px;">
                             <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
@@ -334,8 +332,8 @@
                         </div>
                     </td>
                     <td>
-                        Being resposible is very important in life, we are always resposible for everything we touch.
-                        So it is important to own up to that responsibility and not brush it off on others.
+                        At være ansvarlig er vigtigt i livet, vi er altid ansvarlige for alting vi rører ved.
+                        Så det er vigtigt at vi tager den ansvarlighed alvorligt, og ikke bare vasker det af på andre.
                     </td>
                 </tr>
             </tbody>

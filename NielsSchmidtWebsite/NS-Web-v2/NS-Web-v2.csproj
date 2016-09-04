@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44305</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -158,6 +158,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\flag_round_denmark.png" />
+    <Content Include="Content\Images\flag_round_usa.png" />
+    <Content Include="Content\Images\Niels_Small.png" />
+    <Content Include="Content\Images\Niels_Small_Round.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -183,6 +187,8 @@
     <Content Include="Scripts\jquery-3.1.0.slim.js" />
     <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -204,9 +210,18 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index_DA.cshtml" />
+    <Content Include="Views\Home\Index_EN.cshtml" />
+    <Content Include="Views\Home\Skills_DA.cshtml" />
+    <Content Include="Views\Home\Skills_EN.cshtml" />
+    <Content Include="Views\Home\Portfolio_EN.cshtml" />
+    <Content Include="Views\Home\Portfolio_DA.cshtml" />
+    <Content Include="Views\Home\Education_EN.cshtml" />
+    <Content Include="Views\Home\Education_DA.cshtml" />
+    <Content Include="Views\Home\Work_EN.cshtml" />
+    <Content Include="Views\Home\Work_DA.cshtml" />
+    <Content Include="Views\Home\Contact_EN.cshtml" />
+    <Content Include="Views\Home\Contact_DA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using NS_Web_v2.Models;
 
 namespace NS_Web_v2.Controllers
 {
@@ -59,6 +64,51 @@ namespace NS_Web_v2.Controllers
                 return View("Contact_DA");
 
             return View("Contact_EN");
+        }
+
+        public ActionResult ContactSent()
+        {
+            GetLanguage();
+            return View();
+        }
+
+        public ActionResult ContactNotSent()
+        {
+            GetLanguage();
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Contact(EmailFormModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var body = "<p>Email From: {0} ({1}) ("+ GetLanguage() + ")</p><p>Message:</p><p>{2}</p>";
+                var message = new MailMessage();
+                message.To.Add(new MailAddress(System.Configuration.ConfigurationManager.AppSettings.Get("email_address_to")));
+                message.From = new MailAddress(System.Configuration.ConfigurationManager.AppSettings.Get("email_address_from"));
+                message.Subject = "A " + model.Type + " inquiry from " + model.FromName;
+                message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
+                message.IsBodyHtml = true;
+
+                using (var smtp = new SmtpClient())
+                {
+                    var credential = new NetworkCredential
+                    {
+                        UserName = System.Configuration.ConfigurationManager.AppSettings.Get("email_username"),
+                        Password = System.Configuration.ConfigurationManager.AppSettings.Get("email_password"),
+                    };
+                    smtp.Credentials = credential;
+                    smtp.Host = System.Configuration.ConfigurationManager.AppSettings.Get("email_smtp");
+                    smtp.Port = 587;
+                    smtp.EnableSsl = true;
+                    await smtp.SendMailAsync(message);
+                    return RedirectToAction("ContactSent");
+                }
+            }
+            //return System.Web.UI.WebControls.View(model);
+            return RedirectToAction("ContactNotSent");
         }
 
         public void ChangeLanguage(string language)

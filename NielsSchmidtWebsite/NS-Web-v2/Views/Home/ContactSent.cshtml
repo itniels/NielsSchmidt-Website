@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Session["language"].ToString() == "DA")
+{
+    <div class="well page-top-header">Besked sendt!</div>
+}
+else
+{
+    <div class="well page-top-header">Message sent!</div>
+}
+
+<img src="https://i.giphy.com/OBfYOx5gWfI9W.gif" />
+<br />
+<br />
+
+@if (Session["language"].ToString() == "DA")
+{
+    <p>
+        Tusind tak fordi du tog dig tid til at kontakte mig.<br />
+        Jeg venter spændt på at modtage den og svare dig tilbage hurtigst muligt :-)
+    </p>
+    <br />
+    <span class="btn btn-success" href="@Url.Action("Index", "Home")">Så lidt (Forsiden)</span>
+}
+else
+{
+    <p>
+        Thank you so much for taking the time to contact me.<br />
+        I am eagerly awaiting your message and will reply you as soon as possible. :-)
+    </p>
+    <br />
+    <span class="btn btn-success" href="@Url.Action("Index", "Home")">Your Welcome (Frontpage)</span>
+}

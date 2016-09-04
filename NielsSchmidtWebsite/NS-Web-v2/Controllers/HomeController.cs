@@ -107,7 +107,6 @@ namespace NS_Web_v2.Controllers
                     return RedirectToAction("ContactSent");
                 }
             }
-            //return System.Web.UI.WebControls.View(model);
             return RedirectToAction("ContactNotSent");
         }
 

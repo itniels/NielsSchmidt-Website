@@ -2,4 +2,36 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (Session["language"].ToString() == "DA")
+{
+    <div class="well page-top-header">Beskeden blev IKKE sendt :-(</div>
+}
+else
+{
+    <div class="well page-top-header">Message was NOT sent :-(</div>
+}
 
+<img src="https://i.giphy.com/g79am6uuZJKSc.gif" />
+<br />
+<br />
+
+@if (Session["language"].ToString() == "DA")
+{
+    <p>
+        Årh nej.. noget gik galt!<br/>
+        Venligst prøv igen eller gå tilbage til forsiden.
+    </p>
+    <br/>
+    <span class="btn btn-success" href="@Url.Action("Contact", "Home")">Prøv igen</span>
+    <span class="btn btn-warning" href="@Url.Action("Index", "Home")">Tilbage til forsiden</span>
+}
+else
+{
+    <p>
+        Oh snap.. something went wrong!<br />
+        Please try again or return to the front page.
+    </p>
+    <br/>
+    <span class="btn btn-success" href="@Url.Action("Contact", "Home")">Try again</span>
+    <span class="btn btn-warning" href="@Url.Action("Index", "Home")">Back to the front page</span>
+}

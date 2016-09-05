@@ -1,13 +1,16 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
 
 @if (Session["language"].ToString() == "DA")
 {
+    ViewBag.Title = "Besked ikke sendt";
     <div class="well page-top-header">Beskeden blev IKKE sendt :-(</div>
 }
 else
 {
+    ViewBag.Title = "Message not Sent";
     <div class="well page-top-header">Message was NOT sent :-(</div>
 }
 

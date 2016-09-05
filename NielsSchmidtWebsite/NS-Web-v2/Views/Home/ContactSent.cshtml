@@ -4,10 +4,12 @@
 
 @if (Session["language"].ToString() == "DA")
 {
+    ViewBag.Title = "Besked sendt";
     <div class="well page-top-header">Besked sendt!</div>
 }
 else
 {
+    ViewBag.Title = "Message Sent";
     <div class="well page-top-header">Message sent!</div>
 }
 

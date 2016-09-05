@@ -226,7 +226,7 @@
     <Content Include="Views\Home\Contact_DA.cshtml" />
     <Content Include="Views\Home\ContactSent.cshtml" />
     <Content Include="Views\Home\ContactNotSent.cshtml" />
-    <None Include="Web.secret" />
+    <Content Include="secret.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

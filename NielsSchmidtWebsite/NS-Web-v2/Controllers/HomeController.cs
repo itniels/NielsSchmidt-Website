@@ -94,6 +94,7 @@ namespace NS_Web_v2.Controllers
 
                 using (var smtp = new SmtpClient())
                 {
+                    smtp.UseDefaultCredentials = false;
                     var credential = new NetworkCredential
                     {
                         UserName = System.Configuration.ConfigurationManager.AppSettings.Get("email_username"),
@@ -103,6 +104,7 @@ namespace NS_Web_v2.Controllers
                     smtp.Host = System.Configuration.ConfigurationManager.AppSettings.Get("email_smtp");
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     await smtp.SendMailAsync(message);
                     return RedirectToAction("ContactSent");
                 }

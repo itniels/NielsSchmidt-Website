@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -134,6 +135,7 @@ namespace NS_Web_v2.Controllers
 
         private string GetLanguage()
         {
+            
             if (HttpContext.Request.Cookies["language"] != null)
             {
                 HttpCookie cookie = HttpContext.Request.Cookies.Get("language");
@@ -142,7 +144,28 @@ namespace NS_Web_v2.Controllers
             }
             else
             {
-                ChangeLanguage("EN");
+                string lang = GetBrowserLanguage();
+                ChangeLanguage(lang);
+                return lang;
+            }
+        }
+
+        private string GetBrowserLanguage()
+        {
+            try
+            {
+                CultureInfo cult = CultureInfo.CreateSpecificCulture(Request.UserLanguages[0]);
+                if (cult.Name == "da-DK")
+                {
+                    return "DA";
+                }
+                else
+                {
+                    return "EN";
+                }
+            }
+            catch (Exception)
+            {
                 return "EN";
             }
         }

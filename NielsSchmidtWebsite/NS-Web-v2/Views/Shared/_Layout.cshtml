@@ -37,7 +37,7 @@
                     <li>@Html.ActionLink("Portefølje", "Portfolio", "Home")</li>
                     <li>@Html.ActionLink("Uddannelse", "Education", "Home")</li>
                     <li>@Html.ActionLink("Arbejde", "Work", "Home")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt Mig", "Contact", "Home")</li>
                 }
                 else
                 {
@@ -46,7 +46,7 @@
                     <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
                     <li>@Html.ActionLink("Education", "Education", "Home")</li>
                     <li>@Html.ActionLink("Work", "Work", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contact Me", "Contact", "Home")</li>
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -89,7 +89,7 @@
                 @RenderBody()
             </div>
         </div>
-        <div align="center" class="hidden-xs sidebar col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div align="center" class="hidden-xs sidebar col-sm-4 col-md-4 hidden-lg">
             <h2>Niels Schmidt</h2>
             <img src="/Content/Images/Niels_Small_Round.png" class="form-control-static" height="200"/>
             @if (Session["language"].ToString() == "DA")
@@ -103,6 +103,22 @@
             <a href="https://github.com/itniels" target="_blank">Github</a> <br/>
             <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br/>
             <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br/>
+            <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
+        </div>
+        <div align="center" class="hidden-xs sidebar hidden-sm hidden-md col-lg-4">
+            <h2>Niels Schmidt</h2>
+            <img src="/Content/Images/Niels_Small_Round.png" class="form-control-static" height="300" />
+            @if (Session["language"].ToString() == "DA")
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find mig på</h3>
+            }
+            else
+            {
+                <h3 id="lang_sidebar_FindMeOn">Find me on</h3>
+            }
+            <a href="https://github.com/itniels" target="_blank">Github</a> <br />
+            <a href="https://www.linkedin.com/in/niels-schmidt-75054b44" target="_blank">LinkedIn</a> <br />
+            <a href="https://itniels.dk" target="_blank">ITNiels - Tech Blog</a> <br />
             <a href="https://novakittysoft.dk" target="_blank">NovaKitty Software</a>
         </div>
     </div>

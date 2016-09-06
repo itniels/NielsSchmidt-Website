@@ -44,3 +44,14 @@ textarea {
 .text-footer {
     color: whitesmoke;
 }
+
+/* TABS */
+#exTab .nav-pills > li > a {
+  border-radius: 4px 4px 4px 4px ;
+}
+
+#exTab .tab-content {
+  color : white;
+  background-color: #008CBA;
+  padding : 5px 15px;
+}

@@ -15,8 +15,8 @@ namespace NS_Web_v2
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{lang}",
-                defaults: new { controller = "Home", action = "Index", lang = "EN" }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index" }
             );
         }
     }

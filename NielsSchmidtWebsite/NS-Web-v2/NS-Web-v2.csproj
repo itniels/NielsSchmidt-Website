@@ -148,6 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,6 +228,14 @@
     <Content Include="Views\Home\ContactSent.cshtml" />
     <Content Include="Views\Home\ContactNotSent.cshtml" />
     <Content Include="secret.config" />
+    <Content Include="Views\Portfolio\_Web_EN.cshtml" />
+    <Content Include="Views\Portfolio\_Wpf_EN.cshtml" />
+    <Content Include="Views\Portfolio\_Nuget_EN.cshtml" />
+    <Content Include="Views\Portfolio\_Winforms_EN.cshtml" />
+    <Content Include="Views\Portfolio\_Wpf_DA.cshtml" />
+    <Content Include="Views\Portfolio\_Winforms_DA.cshtml" />
+    <Content Include="Views\Portfolio\_Web_DA.cshtml" />
+    <Content Include="Views\Portfolio\_Nuget_DA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

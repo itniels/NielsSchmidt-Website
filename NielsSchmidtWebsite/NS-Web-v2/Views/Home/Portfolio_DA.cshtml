@@ -4,4 +4,41 @@
 }
 
 <div class="well page-top-header">Portefølje</div>
-<h3>Kommer Snart</h3>
+
+<h4>Venligst vælg en kategori</h4>
+<div id="catButtons">
+    <button id="Web" class="portfolio-btn btn btn-info" onclick="getContent('Web');">Web</button>
+    <button id="Wpf" class="portfolio-btn btn btn-info" onclick="getContent('Wpf');">WPF</button>
+    <button id="Nuget" class="portfolio-btn btn btn-info" onclick="getContent('Nuget');">NuGet</button>
+    <button id="Winforms" class="portfolio-btn btn btn-info" onclick="getContent('Winforms');">Winforms</button>
+</div>
+<br />
+
+<div id="PartialView"></div>
+
+<script>
+    function getContent(page) {
+        $.ajax({
+            url: '/Portfolio/' + page,
+            dataType: 'html',
+            type: 'GET',
+            cache: false,
+            success: function (data) {
+                $('#PartialView').html(data);
+            }
+        });
+        // Change button color
+        $.each($('#catButtons').children('button'), function (index, value) {
+            if (value.id === page) {
+                $(this).attr("class", "portfolio-btn btn btn-success");
+            } else {
+                $(this).attr("class", "portfolio-btn btn btn-info");
+            }
+        });
+    };
+
+    $(document).ready(function () {
+        getContent('Web');
+    });
+
+</script>

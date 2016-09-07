@@ -4,56 +4,41 @@
 }
 
 <div class="well page-top-header">Portfolio</div>
-<h3>Coming Soon</h3>
 
-@*<div id="exTab">
+<h4>Please choose a category</h4>
+<div id="catButtons">
+    <button id="Web" class="portfolio-btn btn btn-info" onclick="getContent('Web');">Web</button>
+    <button id="Wpf" class="portfolio-btn btn btn-info" onclick="getContent('Wpf');">WPF</button>
+    <button id="Nuget" class="portfolio-btn btn btn-info" onclick="getContent('Nuget');">NuGet</button>
+    <button id="Winforms" class="portfolio-btn btn btn-info" onclick="getContent('Winforms');">Winforms</button>
+</div>
+<br />
 
-    <ul class="nav nav-pills">
-        <div>
-            <h4>Websites</h4>
-            <li class="active"><a href="#1a" data-toggle="tab">NielsSchmidt.dk</a></li>
-            <li><a href="#1b" data-toggle="tab">Family Social Network</a></li>
-        </div>
-        <div>
-            <h4>WPF Applications</h4>
-            <li><a href="#2a" data-toggle="tab">iNet Monitor</a></li>
-            <li><a href="#2b" data-toggle="tab">Windows Power Buttons</a></li>
-            <li><a href="#2c" data-toggle="tab">Force My Settings</a></li>
-        </div>
-        <div>
-            <h4>NuGet Gallery</h4>
-            <li><a href="#3a" data-toggle="tab">WPF Startup Manager</a></li>
-        </div>
-        <div>
-            <h4>Winforms Applications</h4>
-            <li><a href="#4a" data-toggle="tab">Application 1</a></li>
-            <li><a href="#5b" data-toggle="tab">Application 2</a></li>
-            <li><a href="#6c" data-toggle="tab">Application 3</a></li>
-        </div>
-    </ul>
+<div id="PartialView"></div>
 
-    <br />
-    <div class="tab-content">
-        <div class="tab-pane active" id="1a">
-            <h3>About</h3>
-            <p>
-                This website was made and is hostet by me.<br />
-                As I needed a remsumé website to show who I am, and what I can do.
-            </p>
-            <h3>Technology</h3>
-            <p>
-                Made using C# + MVC 5 as the basis.<br />
-                And then HTML5, CSS3, JavaScript and JQuery.
-            </p>
-            <h3>Preview</h3>
-            <p>
-                This site is the preview :-)
-            </p>
-            <h3>learn more</h3>
-            <a class="btn btn-success" href="https://github.com/itniels/NielsSchmidt-Website">Github</a>
-        </div>
-        <div class="tab-pane" id="1b">
-            <h4>Coming soon!</h4>
-        </div>
-    </div>
-</div>*@
+<script>
+    function getContent(page) {
+        $.ajax({
+            url: '/Portfolio/' + page,
+            dataType: 'html',
+            type: 'GET',
+            cache: false,
+            success: function (data) {
+                $('#PartialView').html(data);
+            }
+        });
+        // Change button color
+        $.each($('#catButtons').children('button'), function (index, value) {
+            if (value.id === page) {
+                $(this).attr("class", "portfolio-btn btn btn-success");
+            } else {
+                $(this).attr("class", "portfolio-btn btn btn-info");
+            }
+        });
+    };
+
+    $(document).ready(function () {
+        getContent('Web');
+    });
+
+</script>

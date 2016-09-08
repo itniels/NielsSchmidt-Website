@@ -38,7 +38,12 @@ textarea {
 }
 
 .name-text {
-    font-size: 25px;
+    font-size: 22px;
+    padding-top: 40px;
+}
+
+.name-text-sub {
+    font-size: 13px;
 }
 
 .text-footer {

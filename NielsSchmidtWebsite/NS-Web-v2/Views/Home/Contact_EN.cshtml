@@ -13,38 +13,39 @@
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
+
         <div class="col-sm-7 col-md-7">
             <h4>Please fill out the form to get in touch with me.</h4>
-            <hr/>
+            <hr />
         </div>
         <div class="hidden-xs">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
         <div class="form-group">
             <div class="col-md-2 control-label">Your name</div>
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.FromName, new {@class = "form-control"})
-                @Html.ValidationMessageFor(m => m.FromName)
+                @Html.TextBoxFor(m => m.FromName, new { @class = "form-control" })
+                <div style="color: red;">@Html.ValidationMessageFor(m => m.FromName)</div>
             </div>
         </div>
         <div class="hidden-xs hidden-sm">
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group">
             <div class="col-md-2 control-label">Your email</div>
             <div class="col-md-10">
-                @Html.TextBoxFor(m => m.FromEmail, new {@class = "form-control"})
-                @Html.ValidationMessageFor(m => m.FromEmail)
+                @Html.TextBoxFor(m => m.FromEmail, new { @class = "form-control" })
+                <div style="color: red;">@Html.ValidationMessageFor(m => m.FromEmail)</div>
             </div>
         </div>
         <div class="hidden-xs hidden-sm">
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group">
             <div class="col-md-2 control-label">Your type of interest</div>
@@ -56,28 +57,28 @@
                     new {value = "hiring", text = "I want to hire you!"},
                     new {value = "other", text = "Other"},
                 }, "value", "text", "personal"))
-                @Html.ValidationMessageFor(m => m.Type)
+                <div style="color: red;">@Html.ValidationMessageFor(m => m.Type)</div>
             </div>
         </div>
         <div class="hidden-xs hidden-sm">
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group">
             <div class="col-md-2 control-label">Message</div>
             <div class="col-md-10">
-                @Html.TextAreaFor(m => m.Message, new {@class = "form-control"})
-                @Html.ValidationMessageFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+                <div style="color: red;">@Html.ValidationMessageFor(m => m.Message)</div>
             </div>
         </div>
         <div class="hidden-xs hidden-sm">
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input id="sendBtn" type="submit" class="btn btn-info" onclick="SendPress();" value="Send"/>
+                <input id="sendBtn" type="submit" class="btn btn-info" onclick="SendPress();" value="Send" />
             </div>
         </div>
     }

@@ -59,14 +59,6 @@ namespace NS_Web_v2.Controllers
             return View("Work_EN");
         }
 
-        public ActionResult Contact()
-        {
-            if (GetLanguage() == "DA")
-                return View("Contact_DA");
-
-            return View("Contact_EN");
-        }
-
         public ActionResult ContactSent()
         {
             GetLanguage();
@@ -79,17 +71,32 @@ namespace NS_Web_v2.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Contact()
+        {
+            if (GetLanguage() == "DA")
+                return View("Contact_DA");
+
+            return View("Contact_EN");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Contact(EmailFormModel model)
         {
             if (ModelState.IsValid)
             {
-                var body = "<p>Email From: {0} ({1}) ("+ GetLanguage() + ")</p><p>Message:</p><p>{2}</p>";
+                var body = "<h3>You've got mail!</h3>" + "<p>"
+                            + "<b>From:</b> " + model.FromName + "<br>"
+                            + "<b>Email:</b> " + model.FromEmail + "<br>"
+                            + "<b>Type:</b> " + model.Type.ToUpper() + "<br>"
+                            + "<b>Language:</b> " + GetLanguage() + "</p>"
+                            + "<p><b>Message:</b></p>" + model.Message;
+
                 var message = new MailMessage();
                 message.To.Add(new MailAddress(System.Configuration.ConfigurationManager.AppSettings.Get("email_address_to")));
                 message.From = new MailAddress(System.Configuration.ConfigurationManager.AppSettings.Get("email_address_from"));
-                message.Subject = "A " + model.Type + " inquiry from " + model.FromName;
+                message.Subject = "A '" + model.Type.ToUpper() + "' inquiry from " + model.FromName;
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
 
@@ -103,14 +110,19 @@ namespace NS_Web_v2.Controllers
                     };
                     smtp.Credentials = credential;
                     smtp.Host = System.Configuration.ConfigurationManager.AppSettings.Get("email_smtp");
-                    smtp.Port = 587;
-                    smtp.EnableSsl = true;
+                    smtp.Port = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings.Get("email_smtp_port"));
+                    smtp.EnableSsl = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings.Get("email_smtp_ssl"));
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     await smtp.SendMailAsync(message);
-                    return RedirectToAction("ContactSent");
+                    return View("ContactSent");
                 }
             }
-            return RedirectToAction("ContactNotSent");
+
+            // If error - return ContactPage with model error messages.
+            if (GetLanguage() == "DA")
+                return View("Contact_DA", model);
+
+            return View("Contact_EN", model);
         }
 
         public void ChangeLanguage(string language)
@@ -135,7 +147,6 @@ namespace NS_Web_v2.Controllers
 
         private string GetLanguage()
         {
-            
             if (HttpContext.Request.Cookies["language"] != null)
             {
                 HttpCookie cookie = HttpContext.Request.Cookies.Get("language");

@@ -14,9 +14,4 @@ Yes all pictures, text and material on the site is made entirely by me, and shou
 Icons are Commercial free license with no link back.
 
 *Ressources*:  
-http://www.iconarchive.com  
 https://www.iconfinder.com  
-
-#### Notify Icon
-By Philipp Sumi:  
-http://www.hardcodet.net/wpf-notifyicon

@@ -31,8 +31,7 @@ namespace NS_Web_v2
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/tracking")
-                .Include("~/Scripts/GoogleAnaytics.js")
-                );
+                .Include("~/Scripts/GoogleAnaytics.js"));
         }
     }
 }

@@ -60,3 +60,8 @@ textarea {
   background-color: #008CBA;
   padding : 5px 15px;
 }
+
+.portfolio-img img {
+    min-width: 10%;
+    max-width: 95%;
+}
